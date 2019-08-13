@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nifi:
+    ports:
+      - "8080:8080"
+    image: apache/nifi:latest
+    links:
+      - elasticsearch
+  elasticsearch:
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      discovery.type: single-node
+    image: elasticsearch:6.8.2
+
