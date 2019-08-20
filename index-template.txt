@@ -1,0 +1,18 @@
+PUT _template/template_1
+{
+  "index_patterns": ["example_*"],
+  "settings": {
+    "number_of_shards": 1,
+    "number_pf_replicas": 0
+  },
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "createdAt": {
+          "type": "date",
+          "format": "epoch_millis"
+        }
+      }
+    }
+  }
+}
