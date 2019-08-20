@@ -1,9 +1,9 @@
-PUT _template/template_1
+PUT _template/examples
 {
   "index_patterns": ["example_*"],
   "settings": {
     "number_of_shards": 1,
-    "number_pf_replicas": 0
+    "number_of_replicas": 0
   },
   "mappings": {
     "_doc": {
